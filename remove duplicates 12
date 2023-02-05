@@ -1,0 +1,14 @@
+public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next();
+        HashSet<Character> set=new HashSet<>();
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<n.length();i++){
+            if(set.add(n.charAt(i))){
+                sb.append(n.charAt(i));
+            }
+        }
+        System.out.println(sb.toString());
+        
+    }
