@@ -1,0 +1,24 @@
+class Result {
+
+    /*
+     * Complete the 'sumXor' function below.
+     *
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts LONG_INTEGER n as parameter.
+     */
+
+    public static long sumXor(long n) {
+    // Write your code here
+    long res =1;
+    while(n!=0){
+        long  a = n&1;
+        n = n>>1;
+        if(a==0){
+            res*=2;
+        }
+    }
+    return res;
+
+    }
+
+}
