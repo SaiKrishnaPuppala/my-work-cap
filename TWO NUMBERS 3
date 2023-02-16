@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> arr=new ArrayList<>();
+        while(sc.hasNextInt()){
+            arr.add(sc.nextInt());
+        }
+        int fsum=0;
+        for(int i=0;i<arr.indexOf(5);i++){
+            fsum+=arr.get(i);
+        }
+        for(int i=arr.indexOf(8)+1;i<arr.size();i++){
+            fsum+=arr.get(i);
+        }
+        String ssum="";
+        for(int i=arr.indexOf(5);i<=arr.indexOf(8);i++){
+            ssum+=arr.get(i);
+        }
+        int ans=Integer.parseInt(ssum)+fsum;
+        System.out.println(ans);
+        
+    }
+}
