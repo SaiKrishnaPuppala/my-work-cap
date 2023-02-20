@@ -1,0 +1,19 @@
+class Solution {
+    public int reverse(int x) {
+        int a = Math.abs(x);
+        long b=0;
+        while(a>0){
+            b=b*10+a%10;
+            a/=10;
+        }
+        if(b>Integer.MAX_VALUE){
+            return 0;
+        }
+        else if(x<0){
+            return (int)-b;
+        }
+        else{
+            return (int)b;
+        }
+    }
+}
